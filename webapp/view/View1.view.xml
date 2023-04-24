@@ -1,0 +1,327 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.f" xmlns:l="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns="sap.m" 
+xmlns:core="sap.ui.core" controllerName="ZBF_APP.controller.View1" height="100%" class="sapUiSizeCompact" displayBlock="true"
+ xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"  >
+	<Page title="{i18n>title}" class="sapUiContentPadding" id="page1">
+		<content>
+			<VBox width="100%" class="printAreaBox" id="mainVbox">
+				<HBox id="h1" alignItems="Stretch" width="100%" justifyContent="SpaceBetween" class="mainHbox">
+					<!--<Panel width="100%">-->
+					<RadioButtonGroup id="GroupA" columns="4" width="100%"  >
+						<RadioButton text="User-Neueinrichtungr" class="heading"/>
+						<RadioButton text="Erweiterung" class="heading"/>
+						<RadioButton text="Reduzierung" class="heading"/>
+						<RadioButton text="User sperren (bitte ausfüllen)" class="heading"/>
+					</RadioButtonGroup>
+					<!--</Panel>-->
+				</HBox>
+				<!--H1 end-->
+				<HBox id="h2" class="mainHbox">
+					<VBox id="h2v1" width="33%">
+						<!--<Panel>-->
+						<l:SimpleForm>
+							<l:content>
+								<Text text="Mitarbeiterdaten " class="sapUiTinyMarginTop"/>
+								<Label id="nameLbl" text="Vor- Nachname" labelFor="name" class="sapUiTinyMarginTop"/>
+								<Input id="name" width="100%" />
+								<Label id="teamLabel" text="Team" labelFor="team" class="sapUiTinyMarginTop"/>
+								<Select id="team"  >
+									<core:Item key="1" text="Team 1"/>
+									<core:Item key="2" text="Team 2"/>
+									<core:Item key="3" text="Team 3"/>
+									<core:Item key="4" text="Team 4"/>
+									<core:Item key="5" text="Team 5"/>
+								
+								</Select>
+							</l:content>
+						</l:SimpleForm>
+						<!--</Panel>-->
+					</VBox>
+					<VBox id="h2v2" width="34%">
+						<!--<Panel>-->
+						<l:SimpleForm>
+							<l:content>
+								<Text text="Bei externen Mitarbeitern: " class="sapUiTinyMarginTop"/>
+								<Label id="nfLbl" text="Name Firma" labelFor="nameFirma" class="sapUiTinyMarginTop"/>
+								<Input id="nameFirma" width="100%"/>
+							</l:content>
+						</l:SimpleForm>
+						<!--</Panel>-->
+					</VBox>
+					<VBox id="h2v3" width="33%">
+						<!--<Panel>-->
+						<l:SimpleForm>
+							<l:content>
+								<Text text="Berechtigung: " class="sapUiTinyMarginTop"/>
+								<Label id="begnLabel" text="Beginn" labelFor="begDate" class="sapUiTinyMarginTop"/>
+								<DatePicker id="begDate" valueFormat="yyyyMMdd" name="Date From" displayFormat="dd.MM.yyyy"/>
+								<Label id="EndenLabel" text="Ende" labelFor="EndeDate" class="sapUiTinyMarginTop"/>
+								<DatePicker id="EndeDate" valueFormat="yyyyMMdd" name="Date From" displayFormat="dd.MM.yyyy"/>
+							</l:content>
+						</l:SimpleForm>
+						<!--</Panel>-->
+					</VBox>
+				</HBox>
+				<!--H2 end-->
+				<HBox id="h3" width="100%" class="mainHbox">
+					<HBox id="h3h1" width="33%" class="subVbox">
+						<VBox id="h3h1v1" class="sideBarColor" width="15%" backgroundDesign="Solid">
+							<Text text="Erledigit"/>
+							<RadioButtonGroup id="Group1" columns="1">
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+							</RadioButtonGroup>
+						</VBox>
+						<VBox id="h3h1v2" width="85%">
+							<VBox id="h3h1v2v1" class="sapUiContentPadding" width="100%" height="85%">
+								<Text text="Netzwerk" class="subHeading"/>
+								<CheckBox text="Notebook"/>
+								<CheckBox text="VPN* (beinhaltet Zertifikat)"/>
+								<CheckBox text="Sonstiges:"/>
+							</VBox>
+							<HBox id="h3h1v2h1" width="100%" height="15%" class="sideBarColor" backgroundDesign="Solid" fitContainer="true">
+								<RadioButtonGroup id="Group2" columns="1" class="margin">
+									<RadioButton text="Erledigt:"/>
+								</RadioButtonGroup>
+								<Label id="datumLabel" text="Datum" class="margin"/>
+								<DatePicker id="datum" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy" class="margin"/>
+							</HBox>
+						</VBox>
+					</HBox>
+					<HBox id="h3h2" width="34%" class="subVbox">
+						<VBox id="h3h2v1" class="sideBarColor" width="15%" backgroundDesign="Solid">
+							<Text text="Erledigit"/>
+							<RadioButtonGroup id="Group3" columns="1">
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+							</RadioButtonGroup>
+						</VBox>
+						<VBox id="h3h2v2" width="85%">
+							<VBox id="h3h2v2v1" class="sapUiContentPadding" width="100%" height="85%">
+								<Text text="Zugriffsberechtigungen" class="subHeading"/>
+								<Hbox>
+									<CheckBox text="O365"/>
+								</Hbox>
+								<Hbox>
+									<CheckBox text="Service Desk"/>
+								</Hbox>
+								<HBox>
+									<CheckBox text="Typo3"/>
+									<RadioButtonGroup id="Group10" columns="2">
+										<RadioButton text="Frontend" class="smallFont"/>
+										<RadioButton text="Backend" class="smallFont"/>
+									</RadioButtonGroup>
+								</HBox>
+									<HBox>
+									<CheckBox text="Typo3"/>
+									<RadioButtonGroup id="Group11" columns="2">
+										<RadioButton text="Frontend" class="smallFont"/>
+										<RadioButton text="Backend" class="smallFont"/>
+									</RadioButtonGroup>
+								</HBox>
+									<HBox>
+									<CheckBox text="Typo3"/>
+									<RadioButtonGroup id="Group12" columns="2">
+										<RadioButton text="Frontend" class="smallFont"/>
+										<RadioButton text="Backend" class="smallFont"/>
+									</RadioButtonGroup>
+								</HBox>
+								<HBox>
+									<CheckBox text="Zugriff auf sonstige Verzeichnisse:"/>
+								</HBox>
+							</VBox>
+							<HBox id="h3h2v2h1" class="sideBarColor" width="100%" height="15%" backgroundDesign="Solid" fitContainer="true">
+								<RadioButtonGroup id="Group4" columns="1" class="margin">
+									<RadioButton text="Erledigt:"/>
+								</RadioButtonGroup>
+								<Label id="datum2Label" text="Datum" labelFor="datum2" class="margin"/>
+								<DatePicker id="datum2" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy" class="margin"/>
+							</HBox>
+						</VBox>
+					</HBox>
+					<HBox id="h3h3" width="33%" class="subVbox">
+						<VBox id="h3h3v1" class="sideBarColor" width="15%" backgroundDesign="Solid">
+							<Text text="Erledigit"/>
+							<RadioButtonGroup id="Group5" columns="1">
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+							</RadioButtonGroup>
+						</VBox>
+						<VBox id="h3h3v2" width="85%">
+							<VBox id="h3h3v2v1" class="sapUiContentPadding" width="100%" height="85%">
+								<Text text="SAP-Berechtigungen" class="subHeading"/>
+								<HBox width="100%">
+									<Label text="Sys:" labelFor="Sys1" class="margin"/>
+									<Input id="Sys1" width="80px" class="margin"/>
+									<Label text="Mdt:" labelFor="Mdt" class="margin"/>
+									<Input id="mdt1" width="80px" class="margin"/>
+								</HBox>
+								<HBox width="100%">
+									<Label text="Sys:" labelFor="Sys2" class="margin"/>
+									<Input id="Sys2" width="80px" class="margin"/>
+									<Label text="Mdt:" labelFor="Mdt" class="margin"/>
+									<Input id="mdt2" width="80px" class="margin"/>
+								</HBox>
+								<HBox width="100%">
+									<Label text="Sys:" labelFor="Sys3" class="margin"/>
+									<Input id="Sys3" width="80px" class="margin"/>
+									<Label text="Mdt:" labelFor="Mdt" class="margin"/>
+									<Input id="mdt3" width="80px" class="margin"/>
+								</HBox>
+								<HBox width="100%">
+									<Label text="Sys:" labelFor="Sys4" class="margin"/>
+									<Input id="Sys4" width="80px" class="margin"/>
+									<Label text="Mdt:" labelFor="Mdt" class="margin"/>
+									<Input id="mdt4" width="80px" class="margin"/>
+								</HBox>
+								<HBox width="100%">
+									<Label text="Sys:" labelFor="Sys5" class="margin"/>
+									<Input id="Sys5" width="80px" class="margin"/>
+									<Label text="Mdt:" labelFor="Mdt" class="margin"/>
+									<Input id="mdt5" width="80px" class="margin"/>
+								</HBox>
+								<CheckBox id="ossCheck" text="OSS-User" select="onOssSelect"/>
+								<Input id="ossUser" enabled="false"/>
+							</VBox>
+							<HBox id="h3h3v2h1" class="sideBarColor" width="100%" height="15%" backgroundDesign="Solid">
+								<RadioButtonGroup id="Group6" columns="1" class="margin">
+									<RadioButton text="Erledigt:"/>
+								</RadioButtonGroup>
+								<Label id="datum3Label" text="Datum" labelFor="datum3" class="margin"/>
+								<DatePicker id="datum3" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy" class="margin"/>
+							</HBox>
+						</VBox>
+					</HBox>
+				</HBox>
+				<!--H3 end-->
+				<HBox id="h4" width="100%" class="mainHbox">
+					<HBox id="h4h1" width="50%" class="subVbox">
+						<VBox id="h4h1v1" class="sideBarColor" width="10%" backgroundDesign="Solid">
+							<Text text="Erledigit"/>
+							<RadioButtonGroup id="Group7" columns="1">
+								<RadioButton/>
+								<RadioButton/>
+								<RadioButton/>
+							</RadioButtonGroup>
+						</VBox>
+						<!--h4h1v1 end-->
+						<VBox id="h4h1v2" width="90%">
+							<HBox>
+								<Text text="Software" class="subHeading"/>
+								<Text text="(zusätzlich zur Standardinstallation Windows, Office, Outlook, SapGUI...)"/>
+							</HBox>
+							<HBox width="100%" class="sapUiContentPadding">
+								<Label text="Rechnerinventarnr.:" labelFor="rech"/>
+								<Input id="rech" width="200px"/>
+							</HBox>
+							<HBox width="100%" height="75%">
+								<VBox class="margin">
+									<Text text="Programmname" class="subHeading"/>
+									<Input width="150px"/>
+									<Input width="150px"/>
+									<Input width="150px"/>
+								</VBox>
+								<VBox class="margin">
+									<Text text="Version" class="subHeading"/>
+									<Input width="100px"/>
+									<Input width="100px"/>
+									<Input width="100px"/>
+								</VBox>
+								<VBox class="margin">
+									<Text text="inst./freig." class="subHeading"/>
+									<RadioButtonGroup id="Group8" columns="1">
+										<RadioButton/>
+										<RadioButton/>
+										<RadioButton/>
+									</RadioButtonGroup>
+								</VBox>
+								<VBox class="margin">
+									<Text text="deinst./sperren" class="subHeading"/>
+									<RadioButtonGroup id="Group9" columns="1">
+										<RadioButton/>
+										<RadioButton/>
+										<RadioButton/>
+									</RadioButtonGroup>
+								</VBox>
+							</HBox>
+							<HBox height="25%" class="sideBarColor" backgroundDesign="Solid" fitContainer="true">
+								<VBox>
+									<Text text="Installation:"/>
+									<RadioButton text="Erledigt:" class="margin"/>
+								</VBox>
+								<Label id="datum4Label" text="Datum" labelFor="datum4"/>
+								<DatePicker id="datum4" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy"/>
+								<VBox>
+									<Text text="Eintrag in License:"/>
+									<RadioButton text="Erledigt:" class="margin"/>
+								</VBox>
+								<Label id="datum5Label" text="Datum" labelFor="datum" class="margin"/>
+								<DatePicker id="datum5" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy" class="margin"/>
+							</HBox>
+						</VBox>
+						<!--h4h1v2 end-->
+					</HBox>
+					<!--h4h1 end-->
+					<VBox id="h4v1" width="50%" class="subVbox">
+						<HBox width="100%" class="subVbox" height="60%">
+							<VBox class="sideBarColor" width="10%" backgroundDesign="Solid">
+								<Text text="Erledigit"/>
+							</VBox>
+							<VBox width="90%">
+								<VBox width="100%" fitContainer="true" >
+									<VBox class="sapUiContentPadding" width="100%" fitContainer="true">
+										<Text text="Bemerkungen / Sonstige Anforderungen" class="subHeading"/>
+										<TextArea width="300px"/>
+									</VBox>
+									<HBox backgroundDesign="Solid" class="sideBarColor" width="100%" fitContainer="true">
+										<RadioButton text="Erledigt:" class="margin"/>
+										<Label id="datum6Label" text="Datum" labelFor="datum6" class="margin"/>
+										<DatePicker id="datum6" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy" class="margin"/>
+									</HBox>
+								</VBox>
+							</VBox>
+						</HBox>
+						<HBox class="subVbox" height="40%">
+							<VBox class="sideBarColor" width="10%" backgroundDesign="Solid">
+								<Text text="Erledigit"/>
+							</VBox>
+							<VBox width="90%">
+								<Text text="Datenschutz" class="subHeading"/>
+								<HBox class="sapUiContentPadding">
+									<RadioButton text="Datenschutzformular liegt unterzeichnet vor:" class="margin"/>
+									<TextArea width="200px"/>
+								</HBox>
+							</VBox>
+						</HBox>
+					</VBox>
+					<!--h4v1 end-->
+				</HBox>
+				<!--H4 end-->
+				<HBox id="h5" width="100%" class="mainHbox">
+					<HBox width="65%">
+						<Label id="datum7Label" text="Datum" labelFor="datum7" class="margin2"/>
+						<DatePicker id="datum7" valueFormat="yyyyMMdd" name="Datum" displayFormat="dd.MM.yyyy" class="margin2"/>
+						<Label text="Unterschrift Teamleiter/Geschäftsleitung:" labelFor="sig" class="margin2"/>
+						<Input id="sig" class="margin2"/>
+					</HBox>
+					<HBox class="subLastHbox" width="35%" backgroundDesign="Solid">
+						<Label text="Username:" labelFor="uname" class="margin2"/>
+						<Input id="uname" class="margin2"/>
+					</HBox>
+				</HBox>
+			</VBox>
+			<!--</Panel>-->
+		</content>
+		<footer>
+			<OverflowToolbar id="footerToolbar">
+				<ToolbarSpacer/>
+				<Button text="Print PDF" press="genPDF" id="printPDF" data:targetId="mainVbox" ></Button>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>
